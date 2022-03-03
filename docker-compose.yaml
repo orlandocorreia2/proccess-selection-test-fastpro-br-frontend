@@ -1,0 +1,12 @@
+version: '3.0'
+
+services:
+  app:
+    container_name: fastpro_br_app
+    build: .
+    ports:
+      - 80:5000
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - REACT_APP_ENV=local
